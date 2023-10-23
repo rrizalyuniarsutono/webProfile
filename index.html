@@ -29,6 +29,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
  
+  <style>
+    .image-container:hover img {
+      filter: blur(5px); /* Mengatur efek blur saat hover pada container */
+    }
+    .image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* background-color: rgba(0, 0, 0, 0.7); */
+      color: black;
+      padding: 5px 10px;
+      font-size: 17px;
+      display: none;
+    }
+    .image-container:hover .image-text {
+      display: block; /* Menampilkan teks saat container dihover */
+    }
+  </style>
+
 </head>
 <body class="slides chain simplifiedMobile animated">
 		
@@ -143,7 +163,7 @@
       <div class="wrap">
 
         <div class="fix-10-12 toCenter">
-          <h1 class="ae-1" style="font-size: 40px;">Skill & Kemampuan</h1>
+          <h1 class="ae-1" style="font-size: 40px;">My Skills</h1>
           <p class="ae-2"><span class="opacity-8">Having skills and experience in web programming using HTML, CSS, Bootstrap, PHP, JavaScript, React Js, Express Js, Next Js, and Laravel.</span></p>
         </div>
         <div class="fix-12-12">
@@ -230,7 +250,7 @@
         <div class="fix-10-12 toCenter">
           <p class="margin-bottom-2 ae-1"><span class="opacity-6" style="font-size: 40px;">Experience</span></p>
           <h1 class="ae-1" style="font-size: 40px;">Portofolio</h1>
-          <p class="ae-2"><span class="opacity-8">However, I’ve always been more concerned with users. Programmers do their work but once, while users are saddled with it ever thereafter.</span></p>
+          <p class="ae-2"><span class="opacity-8">I have developed this portfolio project by leveraging Node.js, Express.js, React.js, Next.js, and supported by a PostgreSQL database.</span></p>
         </div>
         <div class="fix-12-12 margin-top-3">
           <ul class="flex fixedSpaces later left">
@@ -240,29 +260,144 @@
               <div class="ae-5"><p class="tiny opacity-6">We live in a society where everybody feels guilty.</p></div>
             </li> -->
             <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-4"><img data-popup-id="blanja" data-slider-id="blanja" class="wide popupTrigger" src="assets/img/blanja/tes.jpg" alt="Image Thumbnail"/></a>
-              <h3 class="ae-5">Blanja</h3>
-              <div class="ae-6"><p class="tiny opacity-6">You don’t have to be “a creative” to be creative.</p></div>
+              <a class="image-container button rounded empty margin-bottom-2 ae-4">
+                <img data-popup-id="blanja" data-slider-id="blanja" class="wide popupTrigger" src="assets/img/blanja/tes.jpg" alt="Image Thumbnail"/>
+                <div data-popup-id="blanja" data-slider-id="blanja" class="image-text popupTrigger">Lihat Detail</div>
+              </a>
+              <h3 class="ae-5" style="font-size: 17px;">Blanja</h3>
+              <div class="ae-6">
+                <p class="tiny opacity-6">
+                  If you are interested, visit links below. <br>
+                  <a href="https://github.com/rizalyuniar/blanja-FE" style="text-decoration: none; color: inherit;">
+                    Link Github
+                    <button class="svg-button mr-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 448 512">
+                        <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/>
+                      </svg>
+                    </button>
+                  </a>
+                  <a href="https://blanjaa-fe.vercel.app/" style="text-decoration: none; color: inherit;">
+                    Link Project
+                    <button class="svg-button ml-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                        <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                      </svg>
+                    </button>
+                  </a>
+                </p>
+              </div>
             </li>
             <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-5"><img data-popup-id="markisak" data-slider-id="markisak" class="wide popupTrigger" src="assets/img/markisak/logo.jpg" alt="Image Thumbnail"/></a>
-              <h3 class="ae-6">Markisak</h3>
-              <div class="ae-7"><p class="tiny opacity-6">There is no such thing as simple. Simple is hard.</p></div>
+              <a class="image-container button rounded empty margin-bottom-2 ae-5">
+                <img data-popup-id="markisak" data-slider-id="markisak" class="wide popupTrigger" src="assets/img/markisak/logo.jpg" alt="Image Thumbnail"/>
+                <div data-popup-id="markisak" data-slider-id="markisak" class="image-text popupTrigger">Lihat Detail</div>
+              </a>
+              <h3 class="ae-6" style="font-size: 17px;">Markisak</h3>
+              <div class="ae-7">
+                <p class="tiny opacity-6">
+                  If you are interested, visit links below. <br>
+                  <a href="https://github.com/rizalyuniar/markisak-fe" style="text-decoration: none; color: inherit;">
+                    Link Github
+                    <button class="svg-button mr-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 448 512">
+                        <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/>
+                      </svg>
+                    </button>
+                  </a>
+                  <a href="https://markisak-fe.vercel.app/" style="text-decoration: none; color: inherit;">
+                    Link Project
+                    <button class="svg-button ml-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                        <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                      </svg>
+                    </button>
+                  </a>
+                </p>
+              </div>
             </li>
             <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-6"><img data-popup-id="hirejob" data-slider-id="hirejob" class="wide popupTrigger" src="assets/img/hirejob/logo.jpg" alt="Image Thumbnail"/></a>
-              <h3 class="ae-7">Hire Job</h3>
-              <div class="ae-8"><p class="tiny opacity-6">Design makes what was once impossible possible.</p></div>
+              <a class="image-container button rounded empty margin-bottom-2 ae-6">
+                <img data-popup-id="hirejob" data-slider-id="hirejob" class="wide popupTrigger" src="assets/img/hirejob/logo.jpg" alt="Image Thumbnail"/>
+                <div data-popup-id="hirejob" data-slider-id="hirejob" class="image-text popupTrigger">Lihat Detail</div>
+              </a>
+              <h3 class="ae-7" style="font-size: 17px;">Hire Job</h3>
+              <div class="ae-8">
+                <p class="tiny opacity-6">
+                  If you are interested, visit links below. <br>
+                  <a href="https://github.com/rizalyuniar/hireJob-FE" style="text-decoration: none; color: inherit;">
+                    Link Github
+                    <button class="svg-button mr-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 448 512">
+                        <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/>
+                      </svg>
+                    </button>
+                  </a>
+                  <a href="http://hiree-job.vercel.app" style="text-decoration: none; color: inherit;">
+                    Link Project
+                    <button class="svg-button ml-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                        <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                      </svg>
+                    </button>
+                  </a>
+                </p>
+              </div>
             </li>
             <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-7"><img data-popup-id="ankasa" data-slider-id="ankasa" class="wide popupTrigger" src="assets/img/ankasa/logo.JPG" alt="Image Thumbnail"/></a>
-              <h3 class="ae-8">Ankasa</h3>
-              <div class="ae-9"><p class="tiny opacity-6">Design makes what was once impossible possible.</p></div>
+              <a class="image-container button rounded empty margin-bottom-2 ae-7">
+                <img data-popup-id="ankasa" data-slider-id="ankasa" class="wide popupTrigger" src="assets/img/ankasa/logo.JPG" alt="Image Thumbnail"/>
+                <div data-popup-id="ankasa" data-slider-id="ankasa" class="image-text popupTrigger">Lihat Detail</div>
+              </a>
+              <h3 class="ae-8" style="font-size: 17px;">Ankasa</h3>
+              <div class="ae-9">
+                <p class="tiny opacity-6">
+                  If you are interested, visit links below. <br>
+                  <a href="https://github.com/rizalyuniar/ankasa-fe" style="text-decoration: none; color: inherit;">
+                    Link Github
+                    <button class="svg-button mr-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 448 512">
+                        <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/>
+                      </svg>
+                    </button>
+                  </a>
+                  <a href="https://ankasa2023.vercel.app/" style="text-decoration: none; color: inherit;">
+                    Link Project
+                    <button class="svg-button ml-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                        <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                      </svg>
+                    </button>
+                  </a>
+                </p>
+              </div>
             </li>
             <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
-              <a class="button rounded empty margin-bottom-2 ae-8"><img data-popup-id="realtime" data-slider-id="realtime" class="wide popupTrigger" src="assets/img/realtime/logo.JPG" alt="Image Thumbnail"/></a>
-              <h3 class="ae-9">Realtime Chat</h3>
-              <div class="ae-10"><p class="tiny opacity-6">Design makes what was once impossible possible.</p></div>
+              <a class="image-container button rounded empty margin-bottom-2 ae-8">
+                <img data-popup-id="realtime" data-slider-id="realtime" class="wide popupTrigger" src="assets/img/realtime/logo.JPG" alt="Image Thumbnail"/>
+                <div data-popup-id="realtime" data-slider-id="realtime" class="image-text popupTrigger">Lihat Detail</div>
+              </a>
+              <h3 class="ae-9" style="font-size: 17px;">Realtime Chat</h3>
+              <div class="ae-10">
+                <p class="tiny opacity-6">
+                  If you are interested, visit links below. <br>
+                  <a href="https://github.com/rizalyuniar/RealtimeApp-FE" style="text-decoration: none; color: inherit;">
+                    Link Github
+                    <button class="svg-button mr-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 448 512">
+                        <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/>
+                      </svg>
+                    </button>
+                  </a>
+                  <a href="https://realtime-app-fe.vercel.app/" style="text-decoration: none; color: inherit;">
+                    Link Project
+                    <button class="svg-button ml-2" style="background: transparent; border: none; padding: 0; cursor: pointer;">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                        <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                      </svg>
+                    </button>
+                  </a>
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -274,20 +409,20 @@
 </section>
 
 <!-- Popup Video -->
-<!-- <div class="popup autoplay" data-popup-id="90-2">
+<div class="popup autoplay" data-popup-id="90-2">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
   <div class="content">
     <div class="container">
       <div class="wrap">
         <div class="fix-10-12">
           <div class="embedVideo popupContent">
-            <iframe src="https://www.youtube.com/embed/g8yBqxTiHSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="assets/video/TUTOR SI PERJAKA.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 <!-- Carousel Blanja -->
 <div class="popup animated" data-popup-id="blanja">
   <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
@@ -298,6 +433,12 @@
             <div id="blanja" class="carousel ae-1 fromAbove inlineBlock clickable popupContent disableSelect" data-ride="blanja">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                      <p class="tiny opacity-6">Membuat sebuah aplikasi berbasis website E-commerce dengan menggunakan ReactJS dan serta redux dalam pengelolaan state pada bagian frontend dan menggunakan Express js beserta Rest Api dalam pengelolaan data untuk bagian backend.  Memiliki beberapa fitur yang dapat memudahkan pengguna dalam melakukan aktivitas dan transaksi jual beli seperti pakaian secara online. Adapun website ini menggunakan postgresql dalam penyimpanan database dan menggunakan cloudinary dalam fitur penyimpanan file gambar.</p>
+                      <img style="height: 200px; width: 300px;" src="assets/img/nodexpress.svg" alt="">
+                      <img style="height: 200px; width: 230px;" src="assets/img/reactjs.png" alt="">
+                      <img style="height: 200px; width: 300px;" src="assets/img/postgresql.png" alt="">
+                    </div>
+                    <div class="carousel-item">
                         <img src="assets/img/blanja/landing.jpg" class="d-block w-100 rounded" alt="First slide">
                     </div>
                     <div class="carousel-item">
@@ -348,6 +489,12 @@
             <div id="markisak" class="carousel ae-1 fromAbove inlineBlock clickable popupContent disableSelect" data-ride="markisak">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
+                    <p class="tiny opacity-6">Membuat sebuah aplikasi website resep masakan yang dibuat bersama tim dalam waktu 1 minggu dengan alur kerja menggunakan Workflow. Berperan sebagai frontend developer. Website ini dibuat menggunakan React Js dan Redux dalam pengelolaan state dibagian frontend dan menggunakan Express js serta Rest Api pada bagian backend. Beberapa fitur yang dimiliki seperti  dapat mencari, melihat, melakukan penginputan data resep masakan dan saling berbagi resep antar user. Adapun website ini menggunakan SMTP (Simple Mail Transfer Protocol) untuk registrasi dan verifikasi user serta GCP (Google Cloud Platform) dalam penyimpanan file gambar. Dalam penyimpanan databasenya menggunakan postgresql.</p>
+                    <img style="height: 200px; width: 300px;" src="assets/img/nodexpress.svg" alt="">
+                    <img style="height: 200px; width: 230px;" src="assets/img/reactjs.png" alt="">
+                    <img style="height: 200px; width: 300px;" src="assets/img/postgresql.png" alt="">
+                  </div>
+                  <div class="carousel-item">
                     <img src="assets/img/markisak/home.png" class="d-block w-100 rounded" alt="First slide">
                   </div>
                   <div class="carousel-item">
@@ -401,6 +548,12 @@
             <div id="hirejob" class="carousel ae-1 fromAbove inlineBlock clickable popupContent disableSelect" data-ride="hirejob">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
+                    <p class="tiny opacity-6">Membuat sebuah aplikasi website Hiring Job dengan menggunakan Next Js dan Redux dalam pengelolaan state dibagian frontend serta menggunakan Express js maupun Rest Api pada bagian backend. Beberapa fitur yang dimiliki seperti mencari dan merekrut pelamar kerja. Bisa juga menjadi sebagai pelamar kerja dengan menunjukan portofolio serta experience. Adapun website ini menggunakan cloudinary dalam penyimpanan file gambar. Dalam penyimpanan databasenya menggunakan postgresql.</p>
+                    <img style="height: 200px; width: 300px;" src="assets/img/nodexpress.svg" alt="">
+                    <img style="height: 200px; width: 230px;" src="assets/img/reactjs.png" alt="">
+                    <img style="height: 200px; width: 300px;" src="assets/img/postgresql.png" alt="">
+                  </div>
+                  <div class="carousel-item">
                     <img src="assets/img/hirejob/landingPage.JPG" class="d-block w-100 rounded" alt="First slide">
                   </div>
                   <div class="carousel-item">
@@ -453,7 +606,13 @@
           
             <div id="ankasa" class="carousel ae-1 fromAbove inlineBlock clickable popupContent disableSelect" data-ride="ankasa">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                  <div class="carousel-item active">
+                    <p class="tiny opacity-6">Membuat sebuah aplikasi website Ticketing yang dibuat bersama tim dalam waktu 1 minggu dan berperan sebagai tim backend dengan alur kerja menggunakan Workflow. Dibuat dengan menggunakan React Js dan Redux dalam pengelolaan state dibagian frontend dan menggunakan Express js serta Rest Api pada bagian backend. Beberapa fitur yang dimiliki seperti user dapat melakukan pemesanan tiket pesawat dengan berdasarkan tempat asal dan kota tujuan, terdapat tanggal serta waktu keberangkatan, terdapat jumlah tiket maupun kapasitas penumpang, dll. Adapun website ini menggunakan SMTP (Simple Mail Transfer Protocol) untuk registrasi dan verifikasi user serta GCP (Google Cloud Platform) dalam penyimpanan file gambar. Penyimpanan databasenya menggunakan postgresql.</p>
+                    <img style="height: 200px; width: 300px;" src="assets/img/nodexpress.svg" alt="">
+                    <img style="height: 200px; width: 230px;" src="assets/img/reactjs.png" alt="">
+                    <img style="height: 200px; width: 300px;" src="assets/img/postgresql.png" alt="">
+                  </div>
+                    <div class="carousel-item">
                         <img src="assets/img/ankasa/landing.png" class="d-block w-100 rounded" alt="First slide">
                     </div>
                     <div class="carousel-item">
@@ -497,7 +656,13 @@
           
             <div id="realtime" class="carousel ae-1 fromAbove inlineBlock clickable popupContent disableSelect" data-ride="realtime">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                  <div class="carousel-item active">
+                    <p class="tiny opacity-6">Membuat sebuah aplikasi website Realtime chat dengan menggunakan ReactJS dan serta redux dalam pengelolaan state pada bagian frontend dan menggunakan Express js beserta Rest Api dalam pengelolaan data untuk bagian backend.  Memiliki fitur chatting atau saling berbagi dan mengirim pesan antar user yang berbeda secara realtime menggunakan Socket.IO. Adapun website ini menggunakan postgresql dalam penyimpanan database dan menggunakan cloudinary dalam fitur penyimpanan file gambar.</p>
+                    <img style="height: 200px; width: 300px;" src="assets/img/nodexpress.svg" alt="">
+                    <img style="height: 200px; width: 230px;" src="assets/img/reactjs.png" alt="">
+                    <img style="height: 200px; width: 300px;" src="assets/img/postgresql.png" alt="">
+                  </div>
+                    <div class="carousel-item">
                         <img src="assets/img/realtime/landing.jpg" class="d-block w-100 rounded" alt="First slide">
                     </div>
                     <div class="carousel-item">
@@ -537,59 +702,52 @@
       <div class="wrap">
       
         <div class="fix-10-12 toCenter">
-          <h1 class="ae-1">Simply Complicated</h1>
-          <p class="ae-2"><span class="opacity-8">Creativity often consists of merely turning up what is already there. Did you know that right and left shoes were thought up only a little more than a century ago?</span></p>
+          <p class="margin-bottom-2 ae-1"><span class="opacity-6" style="font-size: 40px;">Experience</span></p>
+          <h1 class="ae-1" style="font-size: 40px;">Freelance</h1>
+          <p class="ae-2"><span class="opacity-8">I have successfully completed several relevant freelance projects and internships.</span></p>
         </div>
         <div class="fix-12-12">  
           <ul class="grid grid-74 later equal margin-top-5">
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+            <!-- <li class="col-4-12 col-tablet-1-2 col-phone-1-1">
+              <div class="button rounded empty margin-bottom-2 videoThumbnail noShadow popupTrigger ae-3" data-popup-id="90-2"><img class="wide" src="assets/img/gallery-90-1.jpg" alt="Video Thumbnail"/></div>
+              <h3 class="ae-4">Inspiration</h3>
+              <div class="ae-5"><p class="tiny opacity-6">We live in a society where everybody feels guilty.</p></div>
+            </li> -->
+            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
               <a href="#" class="box-74">
-                <div class="thumbnail-74">
-                  <img src="assets/img/gallery-74-1.jpg" class="wide" alt="Thumbnail"/>
+                <div class="thumbnail-74 button rounded empty margin-bottom-2 videoThumbnail noShadow popupTrigger ae-3" data-popup-id="90-2">
+                  <img src="assets/img/siperjaka.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">Inspiration</h3>
-                    <p class="tiny opacity-6 cropBottom">Creativity is allowing yourself to make&nbsp;mistakes.</p>
+                    <h3 style="font-size: 17px;">SI Perjaka</h3>
+                    <p class="tiny opacity-6 cropBottom" style="font-size: 15px;">Membuat Sistem Informasi Perhitungan Jam Akumulasi Ajar yang digunakan oleh pegawai Badan Litbang Diklat Kumdil Mahkamah Agung RI</p>
                   </div>
                 </div>
               </a>
             </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-4 fromCenter">
+            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 ae-4 fromCenter">
               <a href="#" class="box-74">
                 <div class="thumbnail-74">
-                  <img src="assets/img/gallery-74-2.jpg" class="wide" alt="Thumbnail"/>
+                  <img src="assets/img/spj.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">The Moment</h3>
-                    <p class="tiny opacity-6 cropBottom">A person tends to critique a design in one of several&nbsp;ways.</p>
+                    <h3 style="font-size: 17px;">Aplikasi SPJ</h3>
+                    <p class="tiny opacity-6 cropBottom" style="font-size: 15px;">Membuat Aplikasi Surat Perjalanan Dinas yang digunakan oleh pegawai Divisi Keuangan Badan Litbang Diklat Kumdil Mahkamah Agung RI</p>
                   </div>
                 </div>
               </a>
             </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
+            <li class="col-4-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
               <a href="#" class="box-74">
                 <div class="thumbnail-74">
-                  <img src="assets/img/gallery-74-3.jpg" class="wide" alt="Thumbnail"/>
+                  <img src="assets/img/dispenduk.png" class="wide" alt="Thumbnail"/>
                 </div>
                 <div class="name-74 equalElement table wide">
                   <div class="cell left top">
-                    <h3 class="">Journey</h3>
-                    <p class="tiny opacity-6 cropBottom">More designers should share space, share&nbsp;resources.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
-              <a href="#" class="box-74">
-                <div class="thumbnail-74">
-                  <img src="assets/img/gallery-74-4.jpg" class="wide" alt="Thumbnail"/>
-                </div>
-                <div class="name-74 equalElement table wide">
-                  <div class="cell left top">
-                    <h3 class="">Colorado</h3>
-                    <p class="tiny opacity-6 cropBottom">An essential aspect of creativity is not being afraid to&nbsp;fail.</p>
+                    <h3 style="font-size: 17px;">Web Profile dan Pelayanan</h3>
+                    <p class="tiny opacity-6 cropBottom" style="font-size: 15px;">Membuat Web Profile dan Pelayanan Masyarakat untuk Dinas Kependudukan dan Pecatatan Sipil Bangkalan tahun 2019</p>
                   </div>
                 </div>
               </a>
@@ -610,40 +768,40 @@
       <div class="wrap">
       
         <div class="fix-10-12">
-          <h1 class="fix-9-12 huge ae-1">The details are not the details. They can make the design.</h1>
+          <h1 class="fix-9-12 huge ae-1">About Me</h1>
 
           <ul class="grid equal fixedSpaces margin-top-3">
             <li class="col-4-12 ae-3">
               <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">HQ Studio</h6>
-                <p class="tiny"><a class="opacity-8" href="#">72 Allen Street, New York, ste. 706, 11249</a></p>
+                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2" style="font-size: 17px;">Alamat</h6>
+                <p class="tiny"><a class="opacity-8" href="#">Sumenep</a></p>
               </div>
               <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">California Studio</h6>
-                <p class="tiny"><a class="opacity-8" href="#">312 Richhy Street, Los Angeles, 90026</a></p>
+                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2" style="font-size: 17px;">Alamat Saat Ini</h6>
+                <p class="tiny"><a class="opacity-8" href="#">Bogor</a></p>
               </div>
             </li>
             <li class="col-4-12 ae-4">
               <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Generatal Engquires</h6>
-                <p class="tiny"><a class="opacity-8" href="mailto:#">general@gmail.com</a></p>
+                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2" style="font-size: 17px;">Email</h6>
+                <p class="tiny"><a class="opacity-8" href="mailto:rizalyuniar123@gmail.com">rizalyuniar123@gmail.com</a></p>
               </div>
               <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Questions</h6>
-                <p class="tiny"><a class="opacity-8" href="mailto:#">questions@gmail.com</a></p>
+                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2" style="font-size: 17px;">Questions</h6>
+                <p class="tiny"><a class="opacity-8" href="mailto:rizalyuniar123@gmail.com">rizalyuniar123@gmail.com</a></p>
               </div>
-              <div class="fix-3-12 equalElement">
+              <!-- <div class="fix-3-12 equalElement">
                 <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Partnership</h6>
                 <p class="tiny"><a class="opacity-8" href="mailto:#">partners@gmail.com</a></p>
-              </div>
+              </div> -->
             </li>
             <li class="col-4-12 ae-5">
               <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Our blog</h6>
-                <p class="tiny"><a class="opacity-8" href="#">Trend Breakdown: New Ways to Use the Hamburger Icon</a></p>
+                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2" style="font-size: 17px;">My blog</h6>
+                <p class="tiny"><a class="opacity-8" href="https://www.blogger.com/profile/02865807965682539583">Lihat Topik Menarik Blog Saya</a></p>
               </div>
-              <div class="fix-3-12 equalElement">
-                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2">Stay in touch</h6>
+              <!-- <div class="fix-3-12 equalElement">
+                <h6 class="uppercase opacity-4 margin-top-3 margin-bottom-2" style="font-size: 17px;">Stay in touch</h6>
                 <ul class="social-circles">
                   <li><a class="social-googlePlus" href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#googlePlus"></use></svg></a></li>
                   <li><a class="social-behance" href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#behance"></use></svg></a></li>
@@ -651,7 +809,7 @@
                   <li><a class="social-instagram" href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
                   <li><a class="social-medium" href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#medium"></use></svg></a></li>
                 </ul>
-              </div>
+              </div> -->
             </li>
           </ul>
         </div>
@@ -667,9 +825,12 @@
   <div class="sections">
     <div class="center">
       <ul class="menu crop">
-        <li><a href="http://facebook.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
-        <li><a href="http://twitter.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
-        <li><a href="http://instagram.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
+        <li><a href="https://www.facebook.com/rizal.yuniar.3" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+        <li><a href="https://twitter.com/R_rizalyuniar" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+        <li><a href="https://www.instagram.com/r.rizalyuniar" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
+        <li><a href="https://github.com/rizalyuniar" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg></a></li>
+        <li><a href="https://linkedin.com/in/rizalyuniar" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a></li>
+        <li><a href="https://wa.me/081231135423" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 122.8c-72.7 0-131.8 59.1-131.9 131.8 0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6 49.9-13.1 4.8 2.9c20.2 12 43.4 18.4 67.1 18.4h.1c72.6 0 133.3-59.1 133.3-131.8 0-35.2-15.2-68.3-40.1-93.2-25-25-58-38.7-93.2-38.7zm77.5 188.4c-3.3 9.3-19.1 17.7-26.7 18.8-12.6 1.9-22.4.9-47.5-9.9-39.7-17.2-65.7-57.2-67.7-59.8-2-2.6-16.2-21.5-16.2-41s10.2-29.1 13.9-33.1c3.6-4 7.9-5 10.6-5 2.6 0 5.3 0 7.6.1 2.4.1 5.7-.9 8.9 6.8 3.3 7.9 11.2 27.4 12.2 29.4s1.7 4.3.3 6.9c-7.6 15.2-15.7 14.6-11.6 21.6 15.3 26.3 30.6 35.4 53.9 47.1 4 2 6.3 1.7 8.6-1 2.3-2.6 9.9-11.6 12.5-15.5 2.6-4 5.3-3.3 8.9-2 3.6 1.3 23.1 10.9 27.1 12.9s6.6 3 7.6 4.6c.9 1.9.9 9.9-2.4 19.1zM400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM223.9 413.2c-26.6 0-52.7-6.7-75.8-19.3L64 416l22.5-82.2c-13.9-24-21.2-51.3-21.2-79.3C65.4 167.1 136.5 96 223.9 96c42.4 0 82.2 16.5 112.2 46.5 29.9 30 47.9 69.8 47.9 112.2 0 87.4-72.7 158.5-160.1 158.5z"/></svg></a></li>
       </ul>
     </div>
   </div>
